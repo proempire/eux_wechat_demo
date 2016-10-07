@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+</head>
+<body>
+<table>
+    <caption>成绩单</caption>
+    <thead>
+        <tr>
+            <th>科目</th>
+            <th>成绩</th>
+        </tr>
+    </thead>
+    <tbody id="score">
+
+    </tbody>
+</table>
+
+<script type="text/html" id="tpl_score">
+    <% for (var i = 0; i < list.length; i++) { %>
+        <% var item = list[i] %>
+        <tr>
+            <td><%=item['课程名称']%></td>
+            <td><%=item['成绩']%></td>
+        </tr>
+    <% } %>
+</script>
+<script src="/js/score.js"></script>
+</body>
+</html>
